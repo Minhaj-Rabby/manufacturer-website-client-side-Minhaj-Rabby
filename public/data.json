@@ -1,0 +1,29 @@
+[
+	{
+		"price": 1840,
+		"img": "https://i.ibb.co/d2c0GP4/product-1.jpg",
+		"aQuantity": 3,
+		"name": "Nell Frederick",
+		"discription": "somthing",
+		"mOQuantity": 1,
+		"brand": "abc"
+	},
+	{
+		"price": 3168,
+		"img": "https://i.ibb.co/2PwD1C8/product-2.jpg",
+		"aQuantity": 3,
+		"name": "Patel Glenn",
+		"discription": "somthing",
+		"mOQuantity": 1,
+		"brand": "ace"
+	},
+	{
+		"price": 2636,
+		"img": "./img/product-3.jpg",
+		"aQuantity": 3,
+		"name": "Hays Benson",
+		"discription": "somthing",
+		"mOQuantity": 1,
+		"brand": "abc"
+	}
+]
