@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { SERVERURL } from "../../../server_url";
 
 const AddAProduct = () => {
 	const navigate = useNavigate();
@@ -22,7 +23,7 @@ const AddAProduct = () => {
 			brand: e.target.brand.value,
 		};
 		const result = await axios.post(
-			"https://stark-brook-44073.herokuapp.com/products",
+			`${SERVERURL}/products`,
 			{
 				...product,
 			}

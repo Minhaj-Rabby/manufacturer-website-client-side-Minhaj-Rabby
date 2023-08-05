@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import { SERVERURL } from "../../../server_url";
 
 const AddAReview = () => {
 	const [user, loading, error] = useAuthState(auth);
@@ -18,7 +19,7 @@ const AddAReview = () => {
 			rating: parseInt(e.target.rating.value),
 		};
 		const result = await axios.post(
-			"https://stark-brook-44073.herokuapp.com/review",
+			`${SERVERURL}/review`,
 			{
 				...rating,
 			}

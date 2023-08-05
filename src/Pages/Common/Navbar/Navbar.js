@@ -76,7 +76,7 @@ const Navbar = () => {
 								src="https://i.ibb.co/4WMh2Mq/Header-Icon.png"
 								alt=""
 							/>
-							<span className=" ml-2 text-2xl text-white">
+							<span className=" ml-2 text-2xl text-[#3D464D]">
 								Powertools
 							</span>
 						</Link>

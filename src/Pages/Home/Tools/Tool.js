@@ -20,7 +20,7 @@ const Tool = (props) => {
 							//getId(_id);
 							navigate(`/purchase/${_id}`);
 						}}
-						className="rounded-sm btn bg-[#FFD333] text-[#3D464D] border-0 font-bold hover:text-white"
+						className="rounded-sm btn bg-[#d3d2ce]  text-[#3D464D] border-0 font-bold hover:text-white"
 					>
 						Book Now
 					</button>

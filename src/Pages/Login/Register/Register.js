@@ -158,7 +158,7 @@ const Register = () => {
 					<p className="text-center">
 						<small>
 							Already have an account?{"  "}
-							<Link className="text-primary" to={"/login"}>
+							<Link className="" to={"/login"}>
 								Login
 							</Link>
 						</small>

@@ -4,13 +4,14 @@ import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 import Spinner from "../../Common/Spinner/Spinner";
+import { SERVERURL } from "../../../server_url";
 
 const Purchase = () => {
 	const [product, setProduct] = useState([]);
 	const { id } = useParams();
 	const [user, loading, error] = useAuthState(auth);
 	useEffect(() => {
-		fetch(`https://stark-brook-44073.herokuapp.com/product/${id}`)
+		fetch(`${SERVERURL}/product/${id}`)
 			.then((res) => res.json())
 			.then((data) => setProduct(data));
 	}, [id]);
@@ -40,7 +41,7 @@ const Purchase = () => {
 			brand,
 		};
 		console.log(order);
-		fetch("https://stark-brook-44073.herokuapp.com/booking", {
+		fetch(`${SERVERURL}/booking`, {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import ConfirmModal from "../../SmallComponent/ConfirmModal/ConfirmModal";
+import { SERVERURL } from "../../../server_url";
 
 const ManageProduct = () => {
 	const [products, setProducts] = useState([]);
@@ -10,7 +11,7 @@ const ManageProduct = () => {
 	const [confirm, setConfirm] = useState(false);
 	const [id, setId] = useState("");
 	useEffect(() => {
-		fetch("https://stark-brook-44073.herokuapp.com/products")
+		fetch(`${SERVERURL}/products`)
 			.then((res) => res.json())
 			.then((data) => setProducts(data));
 	}, []);
@@ -22,7 +23,7 @@ const ManageProduct = () => {
 		const de = async () => {
 			if (confirm) {
 				const result = await axios.delete(
-					`https://stark-brook-44073.herokuapp.com/product/${id}`
+					`${SERVERURL}/product/${id}`
 				);
 				if (result?.data.deletedCount) {
 					const restData = products.filter((item) => item._id !== id);

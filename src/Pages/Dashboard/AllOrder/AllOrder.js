@@ -2,10 +2,11 @@ import React from "react";
 import { useQuery } from "react-query";
 
 import Spinner from "../../Common/Spinner/Spinner";
+import { SERVERURL } from "../../../server_url";
 
 const AllOrder = () => {
 	const { data: orders, isLoading } = useQuery("allOrder", () =>
-		fetch("https://stark-brook-44073.herokuapp.com/bookings").then(
+		fetch(`${SERVERURL}/bookings`).then(
 			(res) => res.json()
 		)
 	);

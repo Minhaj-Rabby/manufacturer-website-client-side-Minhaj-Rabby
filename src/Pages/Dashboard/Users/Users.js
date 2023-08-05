@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import Spinner from "../../Common/Spinner/Spinner";
 import UserRow from "./UserRow";
+import { SERVERURL } from "../../../server_url";
 
 const Users = () => {
 	const {
@@ -9,7 +10,8 @@ const Users = () => {
 		isLoading,
 		refetch,
 	} = useQuery("allOrder", () =>
-		fetch("https://stark-brook-44073.herokuapp.com/user", {
+		fetch(`${SERVERURL}/user`, {
+
 			method: "GET",
 			headers: {
 				authorization: `Bearer ${localStorage.getItem("accessToken")}`,

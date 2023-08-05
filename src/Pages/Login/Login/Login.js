@@ -129,8 +129,8 @@ const Login = () => {
 					</form>
 					<p className="text-center">
 						<small>
-							New to Doctors Protal?{"  "}
-							<Link className="text-primary" to={"/register"}>
+							New to Powertools?{"  "}
+							<Link className="" to={"/register"}>
 								Create New Account
 							</Link>
 						</small>

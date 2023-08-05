@@ -1,5 +1,6 @@
 import { data } from "autoprefixer";
 import { useEffect, useState } from "react";
+import { SERVERURL } from "../server_url";
 
 const useToken = (user) => {
 	const [token, setToken] = useState("");
@@ -7,7 +8,7 @@ const useToken = (user) => {
 		const email = user?.user?.email;
 		const currentUser = { email: email };
 		if (email) {
-			fetch(`https://stark-brook-44073.herokuapp.com/user/${email}`, {
+			fetch(`${SERVERURL}/user/${email}`, {
 				method: "PUT",
 				headers: {
 					"content-type": "application/json",

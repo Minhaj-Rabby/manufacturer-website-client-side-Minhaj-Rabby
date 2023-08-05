@@ -1,10 +1,11 @@
 import React from "react";
 import { toast } from "react-toastify";
+import { SERVERURL } from "../../../server_url";
 
 const UserRow = ({ a, refetch }) => {
 	const makeAdmin = () => {
 		fetch(
-			`https://stark-brook-44073.herokuapp.com/user/admin/${a?.email}`,
+			`${SERVERURL}/user/admin/${a?.email}`,
 			{
 				method: "PUT",
 				headers: {

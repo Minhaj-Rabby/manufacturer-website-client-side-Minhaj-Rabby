@@ -5,8 +5,8 @@ import Footer from "../Common/Footer/Footer";
 const MyPortfolio = () => {
 	return (
 		<div>
-			<div className="hero min-h-screen ">
-				<div className="hero-content text-center">
+			<div className=" min-h-screen ">
+				<div className=" text-center">
 					<div className="">
 						<div className="overflow-x-auto">
 							<table className="table w-full">

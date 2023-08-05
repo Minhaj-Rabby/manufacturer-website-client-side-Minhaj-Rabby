@@ -19,7 +19,6 @@ const Dashbord = () => {
 				<div className="drawer-content ">
 					{/* <!-- Page content here --> */}
 					<div className="container mx-auto px-2">
-						<h2>Dash board</h2>
 						<Outlet />
 					</div>
 				</div>
@@ -28,7 +27,7 @@ const Dashbord = () => {
 						htmlFor="my-drawer-2"
 						className="drawer-overlay"
 					></label>
-					<ul className="menu p-4 overflow-y-auto w-80 bg-[#d3d2ce] text-white ">
+					<ul className="menu p-4 overflow-y-auto w-80 bg-[#d3d2ce] text-[#3D464D]">
 						{/* <!-- Sidebar content here --> */}
 						{!admin && (
 							<li>

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 import ConfirmModal from "../../SmallComponent/ConfirmModal/ConfirmModal";
+import { SERVERURL } from "../../../server_url";
 
 const MyOrder = () => {
 	const [user, loading, error] = useAuthState(auth);
@@ -21,7 +22,7 @@ const MyOrder = () => {
 	useEffect(() => {
 		if (user.email) {
 			fetch(
-				`https://stark-brook-44073.herokuapp.com/booking?email=${user.email}`,
+				`${SERVERURL}/booking?email=${user.email}`,
 				{
 					method: "GET",
 					headers: {
@@ -48,7 +49,7 @@ const MyOrder = () => {
 		const de = async () => {
 			if (confirm) {
 				const result = await axios.delete(
-					`https://stark-brook-44073.herokuapp.com/booking/${id}`
+					`${SERVERURL}/booking/${id}`
 				);
 				if (result?.data.deletedCount) {
 					const restData = products.filter((item) => item._id !== id);

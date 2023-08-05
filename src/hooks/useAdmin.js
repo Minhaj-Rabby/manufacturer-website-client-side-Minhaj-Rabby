@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SERVERURL } from "../server_url";
 
 const useAdmin = (user) => {
 	const [admin, setAdmin] = useState(false);
@@ -6,7 +7,7 @@ const useAdmin = (user) => {
 	useEffect(() => {
 		const email = user?.email;
 		if (email) {
-			fetch(`https://stark-brook-44073.herokuapp.com/admin/${email}`, {
+			fetch(`${SERVERURL}/admin/${email}`, {
 				method: "GET",
 				headers: {
 					"content-type": "application/json",
